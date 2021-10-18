@@ -1,19 +1,23 @@
-const offset = document.querySelector('.header').offsetHeight;
-const scrollUp = document.querySelector('.scroll-up');
+const scrollUpF = () => {
+    const offset = document.querySelector('.header').offsetHeight;
+    const scrollUp = document.querySelector('.scroll-up');
 
-const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
+    const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
 
-window.addEventListener('scroll', () => {
-    if (getTop() > offset) {
-        scrollUp.classList.add('scroll-up_active');
-    } else {
-        scrollUp.classList.remove('scroll-up_active');
-    }
-});
-
-scrollUp.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    window.addEventListener('scroll', () => {
+        if (getTop() > offset) {
+            scrollUp.classList.add('scroll-up_active');
+        } else {
+            scrollUp.classList.remove('scroll-up_active');
+        }
     });
-});
+
+    scrollUp.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+};
+
+scrollUpF();
