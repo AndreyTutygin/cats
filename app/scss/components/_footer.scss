@@ -1,0 +1,118 @@
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 86px auto 114px;
+    padding: 83px 80px 80px;
+    max-width: 1179px;
+    color: #fff;
+    background-color: #1f2021;
+
+    &__txt {
+        max-width: 400px;
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 59px;
+
+        @include media(700) {
+            font-size: 24px;
+            line-height: 40px;
+        }
+    }
+
+    &__subtitle {
+        margin: 26px 0 0;
+        font-size: 28px;
+
+        @include media(700) {
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+
+    &__check {
+        font-size: 14px;
+    }
+
+    @include media(1240) {
+        margin: 50px auto 0;
+        padding: 83px 30px 92px;
+    }
+
+    @include media(700) {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 15px;
+        text-align: center;
+    }
+}
+
+.form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+
+    &__email {
+        border: none;
+        border-radius: 10px;
+        padding: 0 30px;
+        width: 300px;
+        height: 65px;
+
+        &-label {
+            &-txt {
+                @include visually-hidden;
+            }
+        }
+
+        &:focus {
+            outline-color: $mainColor;
+        }
+
+        @include media(1100) {
+            width: 100%;
+        }
+    }
+
+    &__btn-follow {
+        @include media(1100) {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        @include media(700) {
+            margin: 0 auto;
+        }
+    }
+
+    @include media(1100) {
+        flex-direction: column;
+    }
+
+    @include media(700) {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+.btn-follow {
+    border-radius: 10px;
+    width: 250px;
+    height: 65px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    background-color: $mainColor;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: darken($mainColor, 20%);
+    }
+}
+
+.js-validate-error-label {
+    margin-top: 5px;
+}

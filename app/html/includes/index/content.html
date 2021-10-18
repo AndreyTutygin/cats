@@ -1,0 +1,204 @@
+<section class="content">
+    <div class="container content__container">
+        <h2 class="content__title">Список котиков</h2>
+        <div class="sort content__sort">
+            <p class="sort__txt">Сортировать по:</p>
+            <div class="sort__selectors">
+                <div class="sort__select">
+                    <button class="btn-reset sort__btn-open open-price">
+                        <span class="sort__item">Цене</span>
+                        <svg class="sort__svg arrow-price">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                        </svg>
+                    </button>
+                    <ul class="sort__list sort__list-price">
+                        <li class="sort__item"><button class="btn-reset sort__btn-price sort__btn-price_down">По убыванию</button></li>
+                        <li class="sort__item"><button class="btn-reset sort__btn-price sort__btn-price_up">По возрастанию</button></li>
+                    </ul>
+                </div>
+                <div class="sort__select">
+                    <button class="btn-reset sort__btn-open open-years">
+                        <span class="sort__item">Возрасту</span>
+                        <svg class="sort__svg arrow-years">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                        </svg>
+                    </button>
+                    <ul class="sort__list sort__list-years">
+                        <li class="sort__item"><button class="btn-reset sort__btn-years sort__btn-years_down">По убыванию</button></li>
+                        <li class="sort__item"><button class="btn-reset sort__btn-years sort__btn-years_up">По возрастанию</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content__list">
+            <div class="card-product" data-price="10000" data-years="3">
+                <div class="discount card-product__discount"><span class="discount__txt">-40%</span></div>
+                <button class="btn-reset like card-product__like">
+                    <svg class="like__svg">
+                        <use xlink:href="img/sprite.svg#like"></use>
+                    </svg>
+                </button>
+                <img src="./img/cat1.jpg" alt="Кот полосатый" class="card-product__img">
+                <div class="card-product__info">
+                    <h3 class="card-product__title">Кот полосатый</h3>
+                    <table class="specification card-product__specification">
+                        <tr class="specification__str">
+                            <td class="specification__cell">Коричневый</td>
+                            <td class="specification__cell"><strong class="specification__strong">3 мес.</strong></td>
+                            <td class="specification__cell"><strong class="specification__strong">4</strong></td>
+                        </tr>
+                        <tr class="specification__str">
+                            <td class="specification__cell">Окрас</td>
+                            <td class="specification__cell">Возраст</td>
+                            <td class="specification__cell">Кол-во лап</td>
+                        </tr>
+                    </table>
+                    <p class="card-product__price">10000 руб.</p>
+                </div>
+                <button class="btn-reset btn-buy card-product__btn-buy">Купить</button>
+            </div>
+            <div class="card-product" data-price="10000" data-years="3">
+                <div class="discount card-product__discount is-hidden"><span class="discount__txt">-40%</span></div>
+                <button class="btn-reset like like_liked card-product__like">
+                    <svg class="like__svg">
+                        <use xlink:href="img/sprite.svg#like"></use>
+                    </svg>
+                </button>
+                <img src="./img/cat2.jpg" alt="Кот полосатый" class="card-product__img">
+                <div class="card-product__info">
+                    <h3 class="card-product__title">Кот полосатый</h3>
+                    <table class="specification card-product__specification">
+                        <tr class="specification__str">
+                            <td class="specification__cell">Коричневый</td>
+                            <td class="specification__cell"><strong class="specification__strong">3 мес.</strong></td>
+                            <td class="specification__cell"><strong class="specification__strong">4</strong></td>
+                        </tr>
+                        <tr class="specification__str">
+                            <td class="specification__cell">Окрас</td>
+                            <td class="specification__cell">Возраст</td>
+                            <td class="specification__cell">Кол-во лап</td>
+                        </tr>
+                    </table>
+                    <p class="card-product__price">10000 руб.</p>
+                </div>
+                <button class="btn-reset btn-buy btn-buy_disabled card-product__btn-buy">Продан</button>
+            </div>
+            <div class="card-product" data-price="20000" data-years="4">
+                <div class="discount card-product__discount is-hidden"><span class="discount__txt">-40%</span></div>
+                <button class="btn-reset like card-product__like">
+                    <svg class="like__svg">
+                        <use xlink:href="img/sprite.svg#like"></use>
+                    </svg>
+                </button>
+                <img src="./img/cat3.jpg" alt="Кот полосатый" class="card-product__img">
+                <div class="card-product__info">
+                    <h3 class="card-product__title">Кот полосатый</h3>
+                    <table class="specification card-product__specification">
+                        <tr class="specification__str">
+                            <td class="specification__cell">Коричневый</td>
+                            <td class="specification__cell"><strong class="specification__strong">4 мес.</strong></td>
+                            <td class="specification__cell"><strong class="specification__strong">4</strong></td>
+                        </tr>
+                        <tr class="specification__str">
+                            <td class="specification__cell">Окрас</td>
+                            <td class="specification__cell">Возраст</td>
+                            <td class="specification__cell">Кол-во лап</td>
+                        </tr>
+                    </table>
+                    <p class="card-product__price">20000 руб.</p>
+                </div>
+                <button class="btn-reset btn-buy card-product__btn-buy">Купить</button>
+            </div>
+            <div class="card-product" data-price="20000" data-years="2">
+                <div class="discount card-product__discount is-hidden"><span class="discount__txt">-40%</span></div>
+                <button class="btn-reset like card-product__like">
+                    <svg class="like__svg">
+                        <use xlink:href="img/sprite.svg#like"></use>
+                    </svg>
+                </button>
+                <img src="./img/cat1.jpg" alt="Кот полосатый" class="card-product__img">
+                <div class="card-product__info">
+                    <h3 class="card-product__title">Кот полосатый</h3>
+                    <table class="specification card-product__specification">
+                        <tr class="specification__str">
+                            <td class="specification__cell">Коричневый</td>
+                            <td class="specification__cell"><strong class="specification__strong">2 мес.</strong></td>
+                            <td class="specification__cell"><strong class="specification__strong">4</strong></td>
+                        </tr>
+                        <tr class="specification__str">
+                            <td class="specification__cell">Окрас</td>
+                            <td class="specification__cell">Возраст</td>
+                            <td class="specification__cell">Кол-во лап</td>
+                        </tr>
+                    </table>
+                    <p class="card-product__price">20000 руб.</p>
+                </div>
+                <button class="btn-reset btn-buy card-product__btn-buy">Купить</button>
+            </div>
+            <div class="card-product" data-price="30000" data-years="6">
+                <div class="discount card-product__discount"><span class="discount__txt">-40%</span></div>
+                <button class="btn-reset like card-product__like">
+                    <svg class="like__svg">
+                        <use xlink:href="img/sprite.svg#like"></use>
+                    </svg>
+                </button>
+                <img src="./img/cat3.jpg" alt="Кот полосатый" class="card-product__img">
+                <div class="card-product__info">
+                    <h3 class="card-product__title">Кот полосатый</h3>
+                    <table class="specification card-product__specification">
+                        <tr class="specification__str">
+                            <td class="specification__cell">Коричневый</td>
+                            <td class="specification__cell"><strong class="specification__strong">6 мес.</strong></td>
+                            <td class="specification__cell"><strong class="specification__strong">4</strong></td>
+                        </tr>
+                        <tr class="specification__str">
+                            <td class="specification__cell">Окрас</td>
+                            <td class="specification__cell">Возраст</td>
+                            <td class="specification__cell">Кол-во лап</td>
+                        </tr>
+                    </table>
+                    <p class="card-product__price">30000 руб.</p>
+                </div>
+                <button class="btn-reset btn-buy card-product__btn-buy">Купить</button>
+            </div>
+            <div class="card-product" data-price="30000" data-years="1">
+                <div class="discount card-product__discount is-hidden"><span class="discount__txt">-40%</span></div>
+                <button class="btn-reset like like_liked card-product__like">
+                    <svg class="like__svg">
+                        <use xlink:href="img/sprite.svg#like"></use>
+                    </svg>
+                </button>
+                <img src="./img/cat2.jpg" alt="Кот полосатый" class="card-product__img">
+                <div class="card-product__info">
+                    <h3 class="card-product__title">Кот полосатый</h3>
+                    <table class="specification card-product__specification">
+                        <tr class="specification__str">
+                            <td class="specification__cell">Коричневый</td>
+                            <td class="specification__cell"><strong class="specification__strong">1 мес.</strong></td>
+                            <td class="specification__cell"><strong class="specification__strong">4</strong></td>
+                        </tr>
+                        <tr class="specification__str">
+                            <td class="specification__cell">Окрас</td>
+                            <td class="specification__cell">Возраст</td>
+                            <td class="specification__cell">Кол-во лап</td>
+                        </tr>
+                    </table>
+                    <p class="card-product__price">30000 руб.</p>
+                </div>
+                <button class="btn-reset btn-buy btn-buy_disabled card-product__btn-buy">Продан</button>
+            </div>
+        </div>
+        <button class="btn-reset btn-view content__btn-view">Показать еще 20</button>
+        <div class="scroll-up">
+            <svg class="scroll-up__svg">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+            </svg>
+        </div>
+        <div class="like-modal like-modal_add">
+            <span class="like-modal__txt">Добавлено в избранное</span>
+        </div>
+        <div class="like-modal like-modal_delete">
+            <span class="like-modal__txt">Удалено из избранного</span>
+        </div>
+    </div>
+</section>

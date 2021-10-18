@@ -1,0 +1,230 @@
+.content {
+    padding-top: 20px;
+
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        @include visually-hidden;
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 39px;
+        padding-bottom: 68px;
+        gap: 21px;
+
+        @include media(700) {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+.sort {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__selectors {
+        display: flex;
+    }
+
+    &__select {
+        margin-left: 40px;
+
+        @include media(700) {
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__txt {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    &__svg {
+        margin-left: 15px;
+        width: 15px;
+        height: 15px;
+        fill: #000;
+        transition: 0.2s;
+
+        &_active {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__btn {
+        transition: 0.2s;
+
+        &-open {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+
+            &:hover {
+                color: $mainColor;
+
+                .sort__svg {
+                    fill: $mainColor;
+                }
+            }
+        }
+
+        &:hover {
+            color: $mainColor;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        left: 201px;
+        top: 31px;
+        z-index: 2;
+        list-style: none;
+        padding: 20px 25px;
+        box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20%);
+        transition: 0.2s;
+
+        &-years {
+            left: 313px;
+
+            @include media(700) {
+                left: 110px;
+            }
+        }
+
+        &-price {
+            @include media(700) {
+                left: 0;
+            }
+        }
+
+        &_active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        @include media(700) {
+            top: 70px;
+            padding: 15px 20px;
+        }
+    }
+
+    &__item {
+        &:not(:first-child) {
+            margin-top: 15px;
+        }
+    }
+
+    @include media(700) {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.btn-view {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    width: 380px;
+    height: 65px;
+    font-size: 14px;
+
+    @include media(700) {
+        width: 200px;
+        height: 50px;
+    }
+}
+
+.scroll-up {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 59px;
+    background-color: $mainColor;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(25px);
+    transition: 0.5s;
+    cursor: pointer;
+
+    &__svg {
+        width: 18px;
+        height: 18px;
+        fill: #fff;
+        transform: rotate(180deg);
+
+        @include media(700) {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    &_active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &:hover {
+        background-color: darken($mainColor, 20%);
+    }
+
+    @include media(700) {
+        right: 25px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+        box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    }
+}
+
+.like-modal {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    border-radius: 10px;
+    padding: 25px 50px;
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    text-align: center;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(20%, 0);
+    transition: 0.2s;
+
+    &_active {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+    }
+
+    @include media(700) {
+        left: 0;
+        right: 0;
+        top: 20px;
+        bottom: 0;
+        margin: 0 auto;
+        padding: 25px;
+        width: 300px;
+        height: 70px;
+        transform: translate(0, 0);
+    }
+}
